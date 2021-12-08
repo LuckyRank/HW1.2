@@ -17,27 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hg3-y8-YDl">
-                                <rect key="frame" x="125.33333333333333" y="35" width="163.33333333333337" height="534"/>
+                                <rect key="frame" x="134.66666666666669" y="35" width="144.66666666666669" height="534"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-8p-gkH">
-                                        <rect key="frame" x="0.0" y="0.0" width="163.33333333333334" height="144.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="144.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="ySd-8p-gkH" secondAttribute="height" multiplier="97:86" id="CIU-p2-0IO"/>
+                                            <constraint firstAttribute="width" secondItem="ySd-8p-gkH" secondAttribute="height" multiplier="86:86" id="CIU-p2-0IO"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dev-RQ-FJp">
-                                        <rect key="frame" x="0.0" y="194.66666666666669" width="163.33333333333334" height="144.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="194.66666666666669" width="144.66666666666666" height="144.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="dev-RQ-FJp" secondAttribute="height" multiplier="97:86" id="qob-FT-LLC"/>
+                                            <constraint firstAttribute="width" secondItem="dev-RQ-FJp" secondAttribute="height" multiplier="86:86" id="qob-FT-LLC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q51-Fp-7wg">
-                                        <rect key="frame" x="0.0" y="389.33333333333331" width="163.33333333333334" height="144.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="389.33333333333331" width="144.66666666666666" height="144.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Q51-Fp-7wg" secondAttribute="height" multiplier="97:86" id="hyE-C2-9Y0"/>
+                                            <constraint firstAttribute="width" secondItem="Q51-Fp-7wg" secondAttribute="height" multiplier="86:86" id="hyE-C2-9Y0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -50,6 +50,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="buttonStarted" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ7-jE-4X9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,6 +67,12 @@
                             <constraint firstItem="MR2-JR-vh8" firstAttribute="top" secondItem="hg3-y8-YDl" secondAttribute="bottom" constant="58" id="zZj-E7-mBv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="Q51-Fp-7wg" id="cr3-on-vNa"/>
+                        <outlet property="redView" destination="ySd-8p-gkH" id="xOy-NG-Oe5"/>
+                        <outlet property="startButton" destination="MR2-JR-vh8" id="uIA-nL-N4F"/>
+                        <outlet property="yellowView" destination="dev-RQ-FJp" id="yEb-0e-Tco"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
