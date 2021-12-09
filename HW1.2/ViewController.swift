@@ -14,17 +14,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    private let lightOn: CGFloat = 1
+    private let lightOff: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.alpha = 0.3
-        redView.layer.cornerRadius = 70
         
-        yellowView.alpha = 0.3
-        yellowView.layer.cornerRadius = 70
+        redView.alpha = lightOff
+        redView.layer.cornerRadius = redView.frame.width / 2
         
-        greenView.alpha = 0.3
-        greenView.layer.cornerRadius = 70
+        yellowView.alpha = lightOff
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        
+        greenView.alpha = lightOff
+        greenView.layer.cornerRadius = greenView.frame.width / 2
         
         startButton.setTitle("Start", for: .normal)
         
@@ -33,15 +36,15 @@ class ViewController: UIViewController {
     @IBAction func buttonStarted() {
         startButton.setTitle("Next", for: .normal)
         
-        if  redView.alpha != 1 && yellowView.alpha != 1 {
-            redView.alpha = 1
-            greenView.alpha = 0.3
-        } else if redView.alpha != 0.3 {
-            redView.alpha = 0.3
-            yellowView.alpha = 1
-        } else if yellowView.alpha != 0.3 {
-            yellowView.alpha = 0.3
-            greenView.alpha = 1
+        if  redView.alpha != lightOn && yellowView.alpha != lightOn {
+            redView.alpha = lightOn
+            greenView.alpha = lightOff
+        } else if redView.alpha == lightOn {
+            redView.alpha = lightOff
+            yellowView.alpha = lightOn
+        } else if yellowView.alpha == lightOn {
+            yellowView.alpha = lightOff
+            greenView.alpha = lightOn
         }
     }
 }
